@@ -1,0 +1,10 @@
+c:\users\dcc\documents\visual studio 2013\Projects\simulacionAspiradora\simulacionAspiradora\bin\Debug\simulacionAspiradora.exe.config
+c:\users\dcc\documents\visual studio 2013\Projects\simulacionAspiradora\simulacionAspiradora\bin\Debug\simulacionAspiradora.exe
+c:\users\dcc\documents\visual studio 2013\Projects\simulacionAspiradora\simulacionAspiradora\bin\Debug\simulacionAspiradora.pdb
+c:\users\dcc\documents\visual studio 2013\Projects\simulacionAspiradora\simulacionAspiradora\obj\Debug\simulacionAspiradora.csprojResolveAssemblyReference.cache
+c:\users\dcc\documents\visual studio 2013\Projects\simulacionAspiradora\simulacionAspiradora\obj\Debug\simulacionAspiradora.formaEntrada.resources
+c:\users\dcc\documents\visual studio 2013\Projects\simulacionAspiradora\simulacionAspiradora\obj\Debug\simulacionAspiradora.Properties.Resources.resources
+c:\users\dcc\documents\visual studio 2013\Projects\simulacionAspiradora\simulacionAspiradora\obj\Debug\simulacionAspiradora.csproj.GenerateResource.Cache
+c:\users\dcc\documents\visual studio 2013\Projects\simulacionAspiradora\simulacionAspiradora\obj\Debug\simulacionAspiradora.exe
+c:\users\dcc\documents\visual studio 2013\Projects\simulacionAspiradora\simulacionAspiradora\obj\Debug\simulacionAspiradora.pdb
+c:\users\dcc\documents\visual studio 2013\Projects\simulacionAspiradora\simulacionAspiradora\obj\Debug\simulacionAspiradora.formaSalida.resources

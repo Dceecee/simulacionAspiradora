@@ -35,11 +35,17 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.listBoxPuntuacion = new System.Windows.Forms.ListBox();
+            this.puntuacionActualLabel = new System.Windows.Forms.Label();
+            this.puntuacionMediaLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // iniciarSimulacion
             // 
-            this.iniciarSimulacion.Location = new System.Drawing.Point(97, 136);
+            this.iniciarSimulacion.Location = new System.Drawing.Point(97, 175);
             this.iniciarSimulacion.Name = "iniciarSimulacion";
             this.iniciarSimulacion.Size = new System.Drawing.Size(75, 23);
             this.iniciarSimulacion.TabIndex = 0;
@@ -98,11 +104,68 @@
             this.label3.Text = "Posición donde empezara la aspiradora (inicio: 1)";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(290, 9);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(149, 13);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Puntuacion actual del agente:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(291, 48);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(148, 13);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Puntuacion media del agente:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(290, 87);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(180, 13);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "Registro de puntuaciones anteriores:";
+            // 
+            // listBoxPuntuacion
+            // 
+            this.listBoxPuntuacion.FormattingEnabled = true;
+            this.listBoxPuntuacion.Location = new System.Drawing.Point(293, 103);
+            this.listBoxPuntuacion.Name = "listBoxPuntuacion";
+            this.listBoxPuntuacion.Size = new System.Drawing.Size(120, 95);
+            this.listBoxPuntuacion.TabIndex = 10;
+            // 
+            // puntuacionActualLabel
+            // 
+            this.puntuacionActualLabel.AutoSize = true;
+            this.puntuacionActualLabel.Location = new System.Drawing.Point(293, 28);
+            this.puntuacionActualLabel.Name = "puntuacionActualLabel";
+            this.puntuacionActualLabel.Size = new System.Drawing.Size(0, 13);
+            this.puntuacionActualLabel.TabIndex = 11;
+            // 
+            // puntuacionMediaLabel
+            // 
+            this.puntuacionMediaLabel.AutoSize = true;
+            this.puntuacionMediaLabel.Location = new System.Drawing.Point(293, 67);
+            this.puntuacionMediaLabel.Name = "puntuacionMediaLabel";
+            this.puntuacionMediaLabel.Size = new System.Drawing.Size(0, 13);
+            this.puntuacionMediaLabel.TabIndex = 12;
+            // 
             // formaEntrada
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(269, 171);
+            this.ClientSize = new System.Drawing.Size(481, 215);
+            this.Controls.Add(this.puntuacionMediaLabel);
+            this.Controls.Add(this.puntuacionActualLabel);
+            this.Controls.Add(this.listBoxPuntuacion);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -126,6 +189,12 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ListBox listBoxPuntuacion;
+        private System.Windows.Forms.Label puntuacionActualLabel;
+        private System.Windows.Forms.Label puntuacionMediaLabel;
     }
 }
 

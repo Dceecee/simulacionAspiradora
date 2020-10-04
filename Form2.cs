@@ -15,14 +15,30 @@ namespace simulacionAspiradora
         public int espacios;
         public int suciedad;
         public int posicion;
+        public int puntos = 0;
+        public formaEntrada.Agente agenteLocal;
         public static string newline = Environment.NewLine;
-        public formaSalida(int espaciosTemp, int suciedadTemp, int posicionTemp)
+        public formaSalida(int espaciosTemp, int suciedadTemp, int posicionTemp, formaEntrada.Agente agente)
         {
             InitializeComponent();
             espacios = espaciosTemp;
             suciedad = suciedadTemp;
             posicion = posicionTemp-1;
+            agenteLocal = agente;
+        }
 
+        //Actualizo los datos del agente utilizando la cantidad de puntos obtenidos dependiendo de la cantidad de movimientos que se hicieron
+        public void cambiarValoresAgente(int puntos)
+        {
+            float total = 0;
+            agenteLocal.contadorConfiguracion++;
+            agenteLocal.puntuacionActual = agenteLocal.suciedad - puntos;
+            agenteLocal.listaPuntuacion.Add(agenteLocal.puntuacionActual);
+            for (int j = 0; j < agenteLocal.contadorConfiguracion; j++)
+            {
+                total = total + agenteLocal.listaPuntuacion[j];
+            }
+            agenteLocal.puntuacionMedia = total / agenteLocal.contadorConfiguracion;
         }
 
         public class Aspiradora
@@ -30,11 +46,13 @@ namespace simulacionAspiradora
             public int posicionInicial;
             public int posicionActual;
             public int sizeLista;
+            public int puntosLocal;
 
             public Aspiradora()
             {
                 posicionInicial = -1;
                 posicionActual = -1;
+                puntosLocal = -1;
             }
 
             public void crearAspiradora(int size, int pos)
@@ -57,6 +75,7 @@ namespace simulacionAspiradora
                 //Voy validando empezando por la posicion inicial si la posicion actual en la lista aparece como sucia o no, la limpio 
                 //en caso necesario y me muevo a la derecha hasta llegar al final de la lista. Luego empiezo a hacer lo mismo moviendome
                 //a la izquierda hasta llegar al principio de la lista.
+                puntosLocal = 0;
                 string salida="";
                 int j=posicionActual+1;
                 listaEstados.Add(crearLinea(listaAmbiente));
@@ -72,6 +91,7 @@ namespace simulacionAspiradora
                     }
                     salida += "RECORRIDO A LA DERECHA" + newline + newline;
                     listaEstados.Add(crearLinea(listaAmbiente));
+                    puntosLocal++;
                 }
                 salida += "NO SE PUEDE RECORRER A LA DERECHA, RECORRIDO A LA IZQUIERDA" + newline + newline;
                 posicionActual-=2;
@@ -88,9 +108,10 @@ namespace simulacionAspiradora
                     }
                     salida += "RECORRIDO A LA IZQUIERDA" + newline + newline;
                     listaEstados.Add(crearLinea(listaAmbiente));
+                    puntosLocal++;
                 }
+                puntosLocal--;
                 salida += "NO SE PUEDE RECORRER A LA iZQUIERDA, LIMPIEZA TERMINADA" + newline + newline;
-                
                 return salida;
             }
         }
@@ -141,6 +162,7 @@ namespace simulacionAspiradora
             salida = aspiradora.revisarLista(ambiente.listaAmbiente, ambiente.listaEstados);
             textoDisplay.Text += salida;
             listBoxAmbiente.DataSource = ambiente.listaEstados;
+            cambiarValoresAgente(aspiradora.puntosLocal);
         }
     }
 }

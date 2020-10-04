@@ -12,6 +12,38 @@ namespace simulacionAspiradora
 {
     public partial class formaEntrada : Form
     {
+        public class Agente
+        {
+            public float contadorConfiguracion = 0;
+            public float puntuacionActual = 0;
+            public float puntuacionMedia = 0;
+            public List<float> listaPuntuacion = new List<float>();
+            public int posiciones = 0;
+            public int suciedad = 0;
+
+            public Agente()
+            {
+                contadorConfiguracion = 0;
+                puntuacionActual = 0;
+                puntuacionMedia = 0;
+                posiciones = 0;
+                suciedad = 0;
+            }
+        }
+        //Creo una instancia del agente para poder utilizarlo en la forma
+        Agente agente = new Agente();
+
+        //Actualizo los datos del agente en la forma
+        public void actualizarDatos()
+        {
+            listBoxPuntuacion.DataSource = null;
+            listBoxPuntuacion.Items.Clear();
+
+            puntuacionActualLabel.Text = agente.puntuacionActual.ToString();
+            puntuacionMediaLabel.Text = agente.puntuacionMedia.ToString();
+            listBoxPuntuacion.DataSource = agente.listaPuntuacion;
+        }
+
         public formaEntrada()
         {
             InitializeComponent();
@@ -39,8 +71,12 @@ namespace simulacionAspiradora
             else
             {
                 //Mando a llamar a la segunda forma pasando parametros
-                formaSalida frm2 = new formaSalida(int.Parse(inputEspacios.Text), int.Parse(inputSuciedad.Text), int.Parse(inputPosicion.Text));
+                agente.posiciones = int.Parse(inputPosicion.Text);
+                agente.suciedad = int.Parse(inputSuciedad.Text);
+                formaSalida frm2 = new formaSalida(int.Parse(inputEspacios.Text), int.Parse(inputSuciedad.Text), int.Parse(inputPosicion.Text), agente);
                 frm2.Show();
+                
+                actualizarDatos();
             }
         }
 

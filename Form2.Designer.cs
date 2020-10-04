@@ -46,6 +46,7 @@
             // listBoxAmbiente
             // 
             this.listBoxAmbiente.FormattingEnabled = true;
+            this.listBoxAmbiente.HorizontalScrollbar = true;
             this.listBoxAmbiente.Location = new System.Drawing.Point(278, 37);
             this.listBoxAmbiente.Name = "listBoxAmbiente";
             this.listBoxAmbiente.Size = new System.Drawing.Size(223, 212);

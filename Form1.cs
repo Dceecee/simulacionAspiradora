@@ -18,8 +18,12 @@ namespace simulacionAspiradora
             public float puntuacionActual = 0;
             public float puntuacionMedia = 0;
             public List<float> listaPuntuacion = new List<float>();
+            //public 
             public int posiciones = 0;
             public int suciedad = 0;
+            public int movimientos = 0;
+            public double rendimiento = 0.0d;
+            public string last;
 
             public Agente()
             {
@@ -28,6 +32,7 @@ namespace simulacionAspiradora
                 puntuacionMedia = 0;
                 posiciones = 0;
                 suciedad = 0;
+                last = "";
             }
         }
         //Creo una instancia del agente para poder utilizarlo en la forma
@@ -36,12 +41,17 @@ namespace simulacionAspiradora
         //Actualizo los datos del agente en la forma
         public void actualizarDatos()
         {
+            string dump_last = "";
             listBoxPuntuacion.DataSource = null;
             listBoxPuntuacion.Items.Clear();
 
             puntuacionActualLabel.Text = agente.puntuacionActual.ToString();
             puntuacionMediaLabel.Text = agente.puntuacionMedia.ToString();
             listBoxPuntuacion.DataSource = agente.listaPuntuacion;
+            ContenedorRendimiento.Text = agente.rendimiento.ToString();
+            ContenedorMovimientos.Text = agente.movimientos.ToString();
+            //age
+            ContenedorUltimoEstado.Text = agente.last;
         }
 
         public formaEntrada()
@@ -82,6 +92,10 @@ namespace simulacionAspiradora
 
         private void label3_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e) {
 
         }
     }

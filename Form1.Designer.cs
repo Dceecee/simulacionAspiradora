@@ -41,6 +41,12 @@
             this.listBoxPuntuacion = new System.Windows.Forms.ListBox();
             this.puntuacionActualLabel = new System.Windows.Forms.Label();
             this.puntuacionMediaLabel = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.ContenedorUltimoEstado = new System.Windows.Forms.TextBox();
+            this.ContenedorMovimientos = new System.Windows.Forms.TextBox();
+            this.ContenedorRendimiento = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // iniciarSimulacion
@@ -155,11 +161,66 @@
             this.puntuacionMediaLabel.Size = new System.Drawing.Size(0, 13);
             this.puntuacionMediaLabel.TabIndex = 12;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(559, 9);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(66, 13);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "Rendimiento";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(562, 48);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(66, 13);
+            this.label8.TabIndex = 14;
+            this.label8.Text = "Movimientos";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(562, 87);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(72, 13);
+            this.label9.TabIndex = 15;
+            this.label9.Text = "Último Estado";
+            // 
+            // ContenedorUltimoEstado
+            // 
+            this.ContenedorUltimoEstado.Location = new System.Drawing.Point(562, 103);
+            this.ContenedorUltimoEstado.Name = "ContenedorUltimoEstado";
+            this.ContenedorUltimoEstado.Size = new System.Drawing.Size(234, 20);
+            this.ContenedorUltimoEstado.TabIndex = 16;
+            // 
+            // ContenedorMovimientos
+            // 
+            this.ContenedorMovimientos.Location = new System.Drawing.Point(562, 64);
+            this.ContenedorMovimientos.Name = "ContenedorMovimientos";
+            this.ContenedorMovimientos.Size = new System.Drawing.Size(231, 20);
+            this.ContenedorMovimientos.TabIndex = 17;
+            // 
+            // ContenedorRendimiento
+            // 
+            this.ContenedorRendimiento.Location = new System.Drawing.Point(562, 25);
+            this.ContenedorRendimiento.Name = "ContenedorRendimiento";
+            this.ContenedorRendimiento.Size = new System.Drawing.Size(231, 20);
+            this.ContenedorRendimiento.TabIndex = 18;
+            // 
             // formaEntrada
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(481, 215);
+            this.ClientSize = new System.Drawing.Size(828, 215);
+            this.Controls.Add(this.ContenedorRendimiento);
+            this.Controls.Add(this.ContenedorMovimientos);
+            this.Controls.Add(this.ContenedorUltimoEstado);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.puntuacionMediaLabel);
             this.Controls.Add(this.puntuacionActualLabel);
             this.Controls.Add(this.listBoxPuntuacion);
@@ -195,6 +256,12 @@
         private System.Windows.Forms.ListBox listBoxPuntuacion;
         private System.Windows.Forms.Label puntuacionActualLabel;
         private System.Windows.Forms.Label puntuacionMediaLabel;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox ContenedorUltimoEstado;
+        private System.Windows.Forms.TextBox ContenedorMovimientos;
+        private System.Windows.Forms.TextBox ContenedorRendimiento;
     }
 }
 

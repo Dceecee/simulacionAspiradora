@@ -8,3 +8,14 @@ c:\users\dcc\documents\visual studio 2013\Projects\simulacionAspiradora\simulaci
 c:\users\dcc\documents\visual studio 2013\Projects\simulacionAspiradora\simulacionAspiradora\obj\Debug\simulacionAspiradora.exe
 c:\users\dcc\documents\visual studio 2013\Projects\simulacionAspiradora\simulacionAspiradora\obj\Debug\simulacionAspiradora.pdb
 c:\users\dcc\documents\visual studio 2013\Projects\simulacionAspiradora\simulacionAspiradora\obj\Debug\simulacionAspiradora.formaSalida.resources
+C:\Users\Soporte\Desktop\AI\p1\simulacionAspiradora\bin\Debug\simulacionAspiradora.exe.config
+C:\Users\Soporte\Desktop\AI\p1\simulacionAspiradora\bin\Debug\simulacionAspiradora.exe
+C:\Users\Soporte\Desktop\AI\p1\simulacionAspiradora\bin\Debug\simulacionAspiradora.pdb
+C:\Users\Soporte\Desktop\AI\p1\simulacionAspiradora\obj\Debug\simulacionAspiradora.csprojAssemblyReference.cache
+C:\Users\Soporte\Desktop\AI\p1\simulacionAspiradora\obj\Debug\simulacionAspiradora.formaEntrada.resources
+C:\Users\Soporte\Desktop\AI\p1\simulacionAspiradora\obj\Debug\simulacionAspiradora.formaSalida.resources
+C:\Users\Soporte\Desktop\AI\p1\simulacionAspiradora\obj\Debug\simulacionAspiradora.Properties.Resources.resources
+C:\Users\Soporte\Desktop\AI\p1\simulacionAspiradora\obj\Debug\simulacionAspiradora.csproj.GenerateResource.cache
+C:\Users\Soporte\Desktop\AI\p1\simulacionAspiradora\obj\Debug\simulacionAspiradora.csproj.CoreCompileInputs.cache
+C:\Users\Soporte\Desktop\AI\p1\simulacionAspiradora\obj\Debug\simulacionAspiradora.exe
+C:\Users\Soporte\Desktop\AI\p1\simulacionAspiradora\obj\Debug\simulacionAspiradora.pdb
